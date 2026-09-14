@@ -1,1 +1,699 @@
-@green: #2A7428;
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+// ============================================
+// 1. ПЕРЕМЕННЫЕ (VARIABLES)
+// ============================================
+// Цвета
+$green: #2a7428;
+$color-text: #19191d;
+$color-text-second: #656569;
+$color-bg-light: #f4f4f4;
+$color-btn: #1b5219;
+$color-border: #1b5219;
+$bg-menu: #fbfafa;
+$footer-bg: #2f2f3a;
+$font-family_text: "Onest", sans-serif;
+// ============================================
+// 2. ПРОСТРАНСТВО (СИСТЕМА ОТСТУПОВ 8PX)
+// ============================================
+$s-4px: 4px;
+$s-8px: 8px;
+$s-16px: 16px;
+$s-24px: 24px;
+$s-32px: 32px;
+$s-48px: 48px;
+$s-64px: 64px;
+$s-96px: 96px;
+
+// ============================================
+// 3. БРЕЙКПОИНТЫ
+// ============================================
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+// ============================================
+// 4. РАДИУС
+// ============================================
+$radius: 10px;
+
+// ============================================
+// 5. МИКСИНЫ АДАПТИВНОСТИ
+// ============================================
+
+// SCSS: используем @mixin и @include, правила передаём через @content
+@mixin responsive-sm {
+  @media (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin responsive-md {
+  @media (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin responsive-lg {
+  @media (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+// Универсальный миксин для адаптивного свойства
+@mixin adaptive($property, $desktop, $mobile) {
+  #{$property}: $desktop;
+
+  @include responsive-md {
+    #{$property}: $mobile;
+  }
+}
+
+// ============================================
+// 6. МИКСИНЫ FLEX
+// ============================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin gap($desktop, $mobile: null) {
+  gap: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      gap: $mobile;
+    }
+  }
+}
+
+// ---------- SPACING (АДАПТИВНЫЕ ОТСТУПЫ) ----------
+@mixin padding($desktop, $mobile: null) {
+  padding: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      padding: $mobile;
+    }
+  }
+}
+
+@mixin margin($desktop, $mobile: null) {
+  margin: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      margin: $mobile;
+    }
+  }
+}
+
+@mixin padding-y($desktop, $mobile: null) {
+  padding-top: $desktop;
+  padding-bottom: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      padding-top: $mobile;
+      padding-bottom: $mobile;
+    }
+  }
+}
+
+@mixin padding-x($desktop, $mobile: null) {
+  padding-left: $desktop;
+  padding-right: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      padding-left: $mobile;
+      padding-right: $mobile;
+    }
+  }
+}
+
+@mixin margin-top($desktop, $mobile: null) {
+  margin-top: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      margin-top: $mobile;
+    }
+  }
+}
+
+@mixin padding-top($desktop, $mobile: null) {
+  padding-top: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      padding-top: $mobile;
+    }
+  }
+}
+
+@mixin margin-bottom($desktop, $mobile: null) {
+  margin-bottom: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      margin-bottom: $mobile;
+    }
+  }
+}
+
+@mixin padding-bottom($desktop, $mobile: null) {
+  padding-bottom: $desktop;
+
+  @if $mobile != null {
+    @include responsive-md {
+      padding-bottom: $mobile;
+    }
+  }
+}
+
+// ============================================
+// 7. СЕТКА (GRID) ДЛЯ КАРТОЧЕК
+// ============================================
+@mixin grid-cards {
+  display: grid;
+  gap: $s-16px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $screen-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-cards--4-cols {
+  @media (min-width: $screen-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// ============================================
+// 8. ТИПОГРАФИКА
+// ============================================
+@mixin font-size-responsive($desktop, $mobile) {
+  font-size: $desktop;
+
+  @include responsive-md {
+    font-size: $mobile;
+  }
+}
+
+@mixin h1 {
+  @include font-size-responsive(44px, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.h2 {
+  @include font-size-responsive(36px, 28px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+@mixin h3 {
+  @include font-size-responsive(26px, 20px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.h3 {
+  @include h3;
+}
+
+// Утилитарные классы для текста
+.text-sm {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@mixin text-base {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-base {
+  @include text-base;
+}
+@mixin text-lg {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.text-lg {
+  @include text-lg;
+}
+.text-xl {
+  font-size: 20px;
+  line-height: 1.4;
+}
+.text-xxl {
+  font-size: 22px;
+  line-height: 1.2;
+}
+.text-26 {
+  font-size: 26px;
+}
+
+// ============================================
+// 9. КНОПКИ
+// ============================================
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $s-8px;
+  min-width: 200px;
+  height: $s-48px;
+  border: 1px solid $color-btn;
+  border-radius: $radius;
+  background: $color-btn;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: inherit;
+    color: $color-btn;
+    border: 1px solid $color-btn;
+    height: $s-48px;
+  }
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: $s-48px;
+  text-decoration: none;
+  cursor: pointer;
+}
+// ============================================
+// 10. ССЫЛКИ
+// ============================================
+
+.animated_icon {
+  transition: 0.5s transform ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+// ============================================
+// УТИЛИТЫ: СКРЫТИЕ/ПОКАЗ НА МОБИЛЬНЫХ
+// ============================================
+.hidden-mobile {
+  @include responsive-md {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  display: none;
+
+  @include responsive-md {
+    display: flex;
+  }
+}
+
+// ============================================
+// БУРГЕР
+// ============================================
+.burger {
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+
+  &__line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $color-text;
+    transition: 0.3s;
+  }
+
+  // Анимация в крестик (добавим класс .open через JS)
+  &.open &__line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.open &__line:nth-child(2) {
+    opacity: 0;
+  }
+  &.open &__line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+// ============================================
+// OFFCANVAS
+// ============================================
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75vw;
+  //max-width: 85vw;
+  height: 100vh;
+  height: 100dvh; // для iOS
+  background: #fff;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding: $s-24px;
+  display: flex;
+  flex-direction: column;
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $s-24px;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  &__nav {
+    margin-bottom: $s-32px;
+  }
+
+  &__contacts {
+    //margin-top: auto;
+    //margin-bottom: $s-16px;
+    a {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: $s-16px;
+      text-decoration: none;
+      @include flex-column();
+      gap: $s-16px;
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+
+  &__phone {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: $s-16px;
+    color: $color-text;
+    text-decoration: none;
+  }
+
+  &__cta {
+    width: 100%;
+  }
+}
+
+// Меню внутри offcanvas
+.offcanvas-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include flex-column();
+  align-items: flex-start;
+  gap: $s-8px;
+  li {
+    border-bottom: 1px solid #eee;
+  }
+
+  a {
+    display: block;
+    padding: $s-16px 0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    &:hover {
+      color: $color-text;
+    }
+  }
+}
+
+// Соцсети внутри offcanvas
+.offcanvas-socials {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  gap: $s-16px;
+  padding: 0;
+  margin: 0;
+  a {
+    span {
+      display: none;
+    }
+    svg {
+      width: $s-32px;
+      height: $s-32px;
+    }
+    &:hover {
+      svg {
+        color: $color-text;
+      }
+    }
+  }
+}
+
+// ============================================
+// ОВЕРЛЕЙ
+// ============================================
+.offcanvas-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Блокируем скролл страницы при открытом меню
+body.menu-open {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $s-16px;
+}
+
+.container--small {
+  max-width: 800px; // для текстовых страниц (Обо мне, FAQ)
+}
+
+.container--wide {
+  max-width: 1400px; // для портфолио с крупными карточками
+}
+// ============================================
+// МОДАЛЬНОЕ ОКНО
+// ============================================
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  &.modal--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    background: white;
+    border-radius: $radius;
+    padding: $s-32px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+
+    .modal--open & {
+      transform: translateY(0);
+    }
+
+    @include responsive-md {
+      padding: $s-24px;
+      max-width: 90%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: $s-16px;
+    right: $s-16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    color: $color-text-second;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  &__title {
+    margin-bottom: $s-24px;
+    padding-right: $s-32px;
+  }
+
+  &__form {
+    @include flex-column;
+    gap: $s-16px;
+  }
+
+  &__field {
+    @include flex-column;
+    gap: $s-8px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-text-second;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $s-16px;
+    border: 1px solid #e0e0e0;
+    border-radius: $radius;
+    font-family: inherit;
+    font-size: 16px;
+    color: $color-text;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $green;
+    }
+
+    &::placeholder {
+      color: #b0b0b0;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: $s-8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: $color-text-second;
+  }
+
+  &__checkbox-input {
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: $green;
+    cursor: pointer;
+  }
+
+  &__checkbox-text {
+    line-height: 1.4;
+  }
+
+  &__submit {
+    @include btn-base;
+    width: 100%;
+    margin-top: $s-8px;
+  }
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}

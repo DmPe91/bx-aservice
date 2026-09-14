@@ -1,0 +1,281 @@
+@use "base" as *;
+body {
+  font-family: "Pangolin", cursive;
+  color: $color-text;
+  background: $color-bg-light;
+}
+p {
+  margin: 0;
+}
+///// HEADER
+header {
+  border-bottom: 2px solid $green;
+  padding: $s-16px 0;
+}
+.header__top,
+.header__bottom,
+.header-box {
+  @include flex-between;
+  gap: $s-16px;
+}
+.header__logo,
+.logo-box {
+  display: flex;
+  gap: $s-8px;
+  align-items: center;
+  img {
+    max-width: $s-64px;
+  }
+  .site-name {
+    @include flex-column;
+    align-items: center;
+    &__big {
+      color: $green;
+      font-weight: bold;
+    }
+  }
+}
+.addres-box,
+.mail-box {
+  display: flex;
+  align-items: center;
+  gap: $s-4px;
+}
+.header-box__socmedia {
+  display: flex;
+  align-items: center;
+  gap: $s-16px;
+  a {
+    @include flex-center;
+    width: $s-48px;
+    height: $s-48px;
+    background: $green;
+    border-radius: 50%;
+  }
+}
+.phone-box {
+  display: flex;
+  gap: $s-8px;
+  &__text {
+    @include flex-column;
+    gap: $s-4px;
+    a {
+      @include text-lg;
+      &:hover {
+        color: $green;
+      }
+    }
+    .time-work {
+      font-size: $s-8px + $s-4px;
+    }
+  }
+}
+.header-box__nav {
+  ul {
+    display: flex;
+    gap: $s-24px;
+    a {
+      @include text-lg;
+      font-weight: 500;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+.header-box__callback {
+  button {
+    @include btn-base;
+    padding: $s-8px $s-16px;
+    cursor: pointer;
+  }
+}
+///// FOOTER
+footer {
+  border-top: 2px solid $green;
+  padding: $s-16px 0;
+  ul {
+    @include flex-column;
+    gap: $s-8px;
+    li {
+      a {
+        @include text-lg;
+        font-weight: 500;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+.footer__top,
+.footer__bottom {
+  @include flex-between;
+  gap: $s-16px;
+}
+.copyright {
+  display: flex;
+  gap: $s-4px;
+}
+.footer__bottom {
+  margin-top: $s-16px;
+}
+.footer__contacts {
+  @include flex-column;
+  gap: $s-8px;
+}
+.footer__logo {
+  max-width: 270px;
+  @include flex-column;
+  .logo-description {
+    margin-top: $s-32px;
+  }
+}
+// ============================================
+// КАЛЬКУЛЯТОР
+// ============================================
+.calc {
+  background: white;
+  padding: $s-32px;
+  border-radius: $radius;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  @include responsive-md {
+    padding: $s-24px;
+  }
+
+  &__title {
+    @include h3;
+    margin-bottom: $s-8px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $color-text-second;
+    margin-bottom: $s-24px;
+  }
+
+  &__field {
+    margin-bottom: $s-16px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-text-second;
+    margin-bottom: $s-8px;
+  }
+
+  &__select {
+    width: 100%;
+    padding: $s-16px;
+    border: 1px solid #e0e0e0;
+    border-radius: $radius;
+    font-family: inherit;
+    font-size: 16px;
+    color: $color-text;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23656569' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+
+    &:focus {
+      outline: none;
+      border-color: $green;
+    }
+  }
+
+  &__radio-group {
+    display: flex;
+    gap: $s-16px;
+  }
+
+  &__radio {
+    display: flex;
+    align-items: center;
+    gap: $s-8px;
+    cursor: pointer;
+    font-size: 14px;
+
+    input {
+      accent-color: $green;
+      cursor: pointer;
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    gap: $s-4px;
+    padding: $s-16px;
+    background: $color-bg-light;
+    border-radius: $radius;
+    margin-bottom: $s-16px;
+  }
+
+  &__result-label {
+    font-size: 13px;
+    color: $color-text-second;
+  }
+
+  &__result-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: $green;
+  }
+
+  &__submit {
+    @include btn-base;
+    width: 100%;
+    margin-bottom: $s-16px;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      &:hover {
+        background: $color-btn;
+        color: white;
+        border-color: $color-btn;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: $s-8px;
+    font-size: 12px;
+    color: $color-text-second;
+    cursor: pointer;
+
+    input {
+      margin-top: 3px;
+      flex-shrink: 0;
+      accent-color: $green;
+    }
+  }
+}
+.banner-box {
+  background: white;
+  @include flex-between;
+  @include margin-top($s-32px, $s-24px);
+  gap: $s-16px;
+  border-radius: 25px;
+  @include padding($s-24px, $s-16px);
+  &__text,
+  &__form {
+    flex: 1;
+  }
+  &__text {
+    h1 {
+      @include h1;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,16 +1,18 @@
-import { defineConfig } from 'vite'
-import autoprefixer from 'autoprefixer'
-import autoMpaHtml from 'vite-plugin-auto-mpa-html'
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  plugins: [
-    autoMpaHtml()
-  ],
   css: {
     postcss: {
-      plugins: [
-        autoprefixer()
-      ]
-    }
-  }
-})
+      plugins: [autoprefixer()],
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+      },
+    },
+  },
+});
