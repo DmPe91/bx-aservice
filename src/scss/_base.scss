@@ -226,11 +226,13 @@ $radius: 10px;
   font-weight: 700;
   line-height: 1.2;
 }
-
-.h2 {
+@mixin h2 {
   @include font-size-responsive(36px, 28px);
   font-weight: 700;
   line-height: 1.3;
+}
+.h2 {
+  @include h2;
 }
 @mixin h3 {
   @include font-size-responsive(26px, 20px);
@@ -631,7 +633,7 @@ body.menu-open {
     font-size: 16px;
     color: $color-text;
     transition: border-color 0.3s ease;
-
+    box-sizing: border-box;
     &:focus {
       outline: none;
       border-color: $green;
@@ -677,6 +679,7 @@ body.menu-open {
 }
 ul {
   list-style-type: none;
+  padding: 0;
 }
 a {
   color: inherit;

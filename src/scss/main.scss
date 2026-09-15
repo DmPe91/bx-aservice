@@ -17,6 +17,15 @@ header {
 .header-box {
   @include flex-between;
   gap: $s-16px;
+  @include responsive-md {
+    flex-wrap: wrap;
+  }
+}
+@include responsive-md {
+  .header__bottom,
+  .header-box {
+    display: none;
+  }
 }
 .header__logo,
 .logo-box {
@@ -74,6 +83,9 @@ header {
   ul {
     display: flex;
     gap: $s-24px;
+    @include responsive-lg {
+      gap: $s-16px;
+    }
     a {
       @include text-lg;
       font-weight: 500;
@@ -90,6 +102,24 @@ header {
     cursor: pointer;
   }
 }
+// ============================================
+// БУРГЕР (только на мобильных)
+// ============================================
+.burger {
+  display: none;
+  z-index: 1;
+  @include responsive-md {
+    display: flex;
+  }
+}
+
+// Скрываем десктопное меню на мобильных
+.header-box__nav {
+  @include responsive-md {
+    display: none;
+  }
+}
+
 ///// FOOTER
 footer {
   border-top: 2px solid $green;
@@ -112,6 +142,13 @@ footer {
 .footer__bottom {
   @include flex-between;
   gap: $s-16px;
+  @include responsive-md {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+  }
 }
 .copyright {
   display: flex;
@@ -129,6 +166,9 @@ footer {
   @include flex-column;
   .logo-description {
     margin-top: $s-32px;
+    @include responsive-md {
+      margin-top: $s-16px;
+    }
   }
 }
 // ============================================
@@ -262,7 +302,7 @@ footer {
 .banner-box {
   background: white;
   @include flex-between;
-  @include margin-top($s-32px, $s-24px);
+  @include margin-top($s-64px, $s-32px);
   gap: $s-16px;
   border-radius: 25px;
   @include padding($s-24px, $s-16px);
@@ -277,5 +317,297 @@ footer {
     img {
       max-width: 100%;
     }
+  }
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+  }
+}
+//// SERVICES
+.services {
+  @include margin-top($s-64px, $s-32px);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s-24px;
+
+    @include responsive-lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive-sm {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: $radius;
+  padding: $s-24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    @include h3;
+    margin-bottom: $s-8px;
+    min-height: 56px; // фиксированная высота под 2 строки
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $color-text-second;
+    line-height: 1.5;
+    margin-bottom: $s-16px;
+    flex-grow: 1; // занимает свободное место
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: $green;
+    margin-bottom: $s-16px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: $radius;
+    margin-top: auto; // прижимает фото к низу
+  }
+}
+//// TITLE BOX
+.title-box {
+  @include margin-bottom($s-24px, $s-16px);
+  p {
+    @include text-lg;
+  }
+}
+//// ABOUT
+.about {
+  @include margin-top($s-64px, $s-32px);
+  background: $color-bg-light;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $s-48px;
+    align-items: center;
+
+    @include responsive-lg {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: $s-24px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $color-text-second;
+    margin-bottom: $s-16px;
+  }
+
+  &__features {
+    display: flex;
+    gap: $s-32px;
+    margin-top: $s-32px;
+
+    @include responsive-sm {
+      flex-direction: column;
+      gap: $s-16px;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__feature-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: $green;
+    line-height: 1;
+  }
+
+  &__feature-label {
+    font-size: 14px;
+    color: $color-text-second;
+    margin-top: $s-4px;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: $radius;
+
+      @include responsive-md {
+        height: 300px;
+      }
+    }
+  }
+}
+//// STEPS
+.steps {
+  @include margin-top($s-64px, $s-32px);
+
+  &__title {
+    @include h2;
+    text-align: center;
+    margin-bottom: $s-8px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: $color-text-second;
+    margin-bottom: $s-48px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $s-24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include responsive-lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive-sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: $s-32px $s-24px;
+    background: white;
+    border-radius: $radius;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  &__number {
+    display: block;
+    font-size: 48px;
+    font-weight: 800;
+    color: $green;
+    //opacity: 0.15;
+    line-height: 1;
+    margin-bottom: $s-16px;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: $s-8px;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: $color-text-second;
+  }
+}
+//// BRAND
+.brands {
+  padding: $s-64px 0;
+  background: $color-bg-light;
+
+  &__title {
+    @include h2;
+    text-align: center;
+    margin-bottom: $s-8px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: $color-text-second;
+    margin-bottom: $s-48px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: $s-24px;
+
+    @include responsive-lg {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include responsive-md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $s-16px;
+  padding: $s-24px;
+  background: white;
+  border-radius: $radius;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+    .brand-card__logo {
+      transform: scale(1.1);
+    }
+  }
+
+  &__logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+//// NOT-FRONT
+.page {
+  @include padding-y($s-64px, $s-32px);
+  &__subtitle {
+    @include margin-bottom($s-32px, $s-16px);
   }
 }
