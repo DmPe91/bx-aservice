@@ -28,7 +28,8 @@ header {
   }
 }
 .header__logo,
-.logo-box {
+.logo-box,
+.site-link {
   display: flex;
   gap: $s-8px;
   align-items: center;
@@ -609,5 +610,11 @@ footer {
   @include padding-y($s-64px, $s-32px);
   &__subtitle {
     @include margin-bottom($s-32px, $s-16px);
+  }
+  .contacts-box__info {
+  margin-top: $s-16px;
+  display: flex;
+  align-items: center;
+  gap:$s-8px; 
   }
 }
