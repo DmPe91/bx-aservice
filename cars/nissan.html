@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life АКПП — Название страницы</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <script type="module" crossorigin src="/bx-aservice/assets/main-BKtRsQxq.js"></script>
+    <link rel="stylesheet" crossorigin href="/bx-aservice/assets/main-D1_Xxz4y.css">
+  </head>
+  <body>
+    <header>
+      <div class="header__inner container">
+        <div class="header__top">
+          <button class="burger" type="button" aria-label="Меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <div class="header__logo">
+           <a href="../" class="site-link">
+            <img src="/bx-aservice/assets/gears-BOB79LJm.png" alt="logo" />
+            <p class="site-name">
+              <span class="site-name__small text-sm">life</span>
+              <span class="site-name__big h3">АКПП</span>
+            </p>
+           </a>
+          </div>
+          <div class="header-box">
+            <div class="addres-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAnFJREFUSImVlM1LFGEcxz+/mWVX280sVDpVB7F118jo0gsRUvQCEUWHyC6ehUp0K0K6dbHd9hJhdLIX8R8IIsFeLt4sUnd3FkrxZGVWrkViu/N0CZyZndnZ/R2/r8/vGZ4RfCY6EN2vCT0gx0Dt+A8voJhQmozkkrl3lfziRcR74xG1yRwGdbmCTgk81Qn2Tqemf1dd0NnX2bge+PMapLPS6Szzfk1f75obmltxEpqbej2wNlZDOMC+UDH4zI0oK2hPtJ8HTrmJBVYA96sQzsT7d5/1LQB11cU8A9qBTMrYml0wtmjCSWChzKnJNZdDbUzrldaGYCiwDAQs8LKI3pFJZj5btbGbsTglcwoIWeBiSVPb8nfzq64b1IX0XY5wgFFnOEB2KJtBeOmAA5qp7bQCtgIlbHYGictVbHAy78R0UzV4FhSFb06DUuzxKjCV2uvESroseRbk5/MfgVWbQ+iO97eVBcUG2k4LHLVLWcmFc58cmMOYiI4C3XZU/VRKG9RMbRyNoKJ0DuE2UGdTweNcyuixYs4PiqlIa8Ile7k0iqgHSi855bZ8HZV2gmXvwLhnTAFjlZI8ZmQ2lZ/2LQAQ0QeAQg3hBVWUQTdCdwOXJpd+tRxuAjheTbpAIps2XrlxrhsAENbTAvkq8mebI9sfVij3no7r0ROmKnut1lGm0GUkjbdeAu8NgNmkMa4Uzz3T4UmlcN8CAF0r9gFrLlSBotzy9fsJvk5+/9F8qCkMHLEz6kYubUz4+X03AKiPhO9g/ekpMvWFyHA1Xt8NABbfLP5tOdj0BeECoDTh4of7M3PVeGsZiSWiL9oT0Ue1mP4BYaHEHWfWG4wAAAAASUVORK5CYII="
+                alt="icon"
+                width="24"
+                height="24"
+              />
+              <p>Город,улица,дом</p>
+            </div>
+            <div class="header-box__socmedia">
+              <a href="https://telegram.org" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABLlJREFUeJztmk1oHVUUx88NoY3GfthAU4sQSysNSrsJKLYiah8UxFZBsjRdSINCIRuluFAEXWhxo/iVhS6CiHShRfEDoinWj2KspIilHwslbVE0fpFGW5s0PxczL71vMu+9e2fOzFV8v1Uyc+8553/enTv3njsi/wOA1cBDwFvJe+0hAioLoE9EBkWkT0Q6RWQi2aat7KCKBlgC9AOjInJERLriW70iMh4usoIB1gB7gbNETAOPACe5zC2h41QH6ANGgIuW0AngHuCMde0icEXoeFUAlsbD/DCLGQHuBH5JXD8SOu7cAGuBJ4CpFOHngd3ATuCvlPsvho4/M8CtwH5gNkUYwClgM7CrQZtdoXV4AXQAA8A3dQRVOQCsJJoA5xu06w2tyQlgPfA08GsT4bOx6Dbg2SZt/wD+va98wAAVomE+10QMRLP7FqJ3/hsO7UdDa0wFWAYMAsccRFQZA7qBTuADxz5PhdZaA3A90TD/3UP4fNynDVgFfOHRd2dozRIHXgHepfFklcYUsD220wOc8Ox/TUjhK4Ah4DvPoKuMAz2xrRupXd25MBlKeC/wHDCTUTjAMLAktnczi1d3LuwvU3QbsAMYxX+Y20wD/ZbdHaSv7lx4uAzhq4neyZM5RFeZADZYtgeov7pz4bYihfcRDdOsv06SEeBKy/4Q+UbSHHCVtuiFgkN+vQucB3ZbPgywT8HuUU3h1YKD7yzcjFPAZstPO/Caku1hDeFpBQctDgArLV+dwPuK9h/IKrpRwUGD6kbGWD5XAZ8r+9nkK7xRwUGLM8CWhN8e4LiynxnArepN84KDFmNAd8L3DcDpAnwddBX/IH6bkizMAY+T2JMDW4HfCvK5zykBcSDVZz7vCi6NhY1MwufdwJ/Kvmzuc05AIrCNRNvOnxWCGAeuS/FxP8W8VWyuzZQAK8i8o2JhI5OwOwRc0tOZyg+5xKcEXS1g/OTgvGYjY9kwwDMFirZ5WzUBlgh7GZw2Kmo2Mla/duDVksQDPFpIAhKi1gOvJByn/fLaqzsXthWegFjcMmons5cT968GPitZ/CVguauGXLVyY8w5EfnKulSxxK8VkU9EZGseHxk4YYyZdm2scVhg19w3AOvivz8UEb+1uA5e3wBoJODjxP/biFZ8GxVsZ+FLn8YaCTgsIvaQq4hIt4gsWgOURLkJMMbMicin1qWKiPTktZuRCyLyrU8HrQND+zHoEpG7lOz68rUxZtang1YCkoePA0p2ffH+CEorAcdE5Efr/1CPgNfzL6KUAGMMIjKmYSsnwUaAiMhHGfpMighK/qeMMd/7dtJMgO9HCIckWihtF5GzCv69h786uB9bH8Q6sSE6QR7OuQd4LKT2qpAXHAJ9D+io07+fbCfAkFJ2Kx3g3iZBvgMsbWJjDdFHFD7MA12N7JYC0VCuV1p/E8c6PVH1aBA455iAk0Vrc4b006TXXcUnbK0DDjkkYKQILZkAnkwEN0yOb/SIyml7gb8bJGCPpoZcALdbgb2Edf6X0+4m4GidBNyk4UMFosLpDD4nM+62O4iq03ZZ/QJNJtbSAQrdDQJ3cPlznPALoBAAy+P55fnQsQQFWBE6hhYtWrRo0aJFi/8k/wCiSmYDPZq8FQAAAABJRU5ErkJggg=="
+                  alt="tg"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a href="https://max.ru/" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR42uVbWUhVURRVG7SBLKGUPiILoSjDDCpKpQJpMiWlDysKBSvBMohQkvyoLKOJChr8KIOQPkLLoigpqbS0+jCKirSizCJSskFK007r4Hlxk+cb7j7nnndfCxY4cNfZe79zz7D3fgEBmsAYCwcngDPA6eLnUQH+Bjg1GVwDHgZvgc1gF+sfHeBjsAzcAkbbzeFAcL5w+BWTg5fgQTDelx0fAa4DnzC1eCRm1EBfcXwYWAC2M2vRKAIRqNP5VeB7phfXwUirHR8Nnme+g+/gJktmAwaZDX5gvokz4GCVzq8Q25Qvo5bPUBXOZ4O/mT3wnB+0ZDq/Fuxh9gLfLkfKcD4J7Gb2RBVpTcDDUeBnZm+UmHV+iAWnOquQYiYAxcx/8AmM8Mb5GPAX8y9UeBOAOwoM4FtoNZgPLhHrSwTPAYhcQCKYA14QJzsViPPE+UTJg/KZdASc6MUHEAxmgE8l23Lbk8HvShywHpxG2IWCwCzwi0SbFrsacJbEgc6BIZIOYuPAOkl23XA1UImkQU7KvplBb7i4+lLBT7Tj+0tsyJhqV1Vla/ipDqyRYGOhM/FkCcItYKji6/hYCdfxJmfCxyUEIM2ihEyKBFuj+oq+JgretDgrVU20N8MoFqF0e1ETgDiivaeMYgslJCACA6yvPzRRbDaK5REDsFtTVnoHwWZenQqStf/P1RSABKLd4Q6hSoJIp9JMrOsAhBEDEOsQqqfk3jRXpj4SbF/qEGkkiFzUHIC3BNuTHCKU1fSY5gA0E2xPlBGAfZpL8V8JtifIeAWKNQYgkrgIznQIPbDbGUDYvVzWNniFILJTYwDOEuxuNQqVEoSKNDZmfCPYXWMUKyAIndAUgDxpFSP8kkoQKtd0AqSW7NKNgpMIQg0aAlBGdL7rn8qx2E/bTIp1/L1VWeP8BhlVY2fClwiCUyxyPs1Nk6WnyHEmnk8QXG9RR5qMeuUP5qyFBn+MJ4hWuiixDyY6PlTUGWShtL+BQsCfhJxAWB+9MeA9ccxONVkWW81622Rlocfl60osOhQadOaAb/r8/yGY665OLyrF28BnCqrDZe6ivouYGSoCT7t5V7vFrOBl8AP8ICWmOD+Ov2Pq0OG0JKa4NO5LyPd0wen0Q+fvg4M8XXxq/cz5dq+aqfn93o+c52vRIquTDL4C3pOUZbYbwx+cz6Wcvlpt7DzfZrOp5+46mzrPM0TLdOfadIG39U6VdfPaY7OVfr+sjjRHALabMKQCPGRxaz0/s8SouHtv9NIQ/soEi2djxcVHJRrAZJXJB087xnhdbqWT5weIvt8WiU7zI3o5uEB5N4rIDbxgrr+0uJXn5j3o+c1kvQ2OZrI5beLVyrT8i9Xi293FonOcT+lr4F5wnplPAM+Eimc3g0dZ7/cOqwy8LAo0/EqdDkZbmWz9b/EHXwo/j1QjQJgAAAAASUVORK5CYII="
+                  alt="max"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+            <div class="phone-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAqpJREFUWIXtlktIVFEcxn//OzcaMyPw0cZoQs3XGKKUZS0sYqCoNhEILWpTbROcaDmbSHykUAjVskXJQJs2YRHVwlfYxq5zlQgVF6Yj+JhRfN3TwpmcdGYQm5k2frv/d7/D9+Nyz7kHdvWfJVHd69iKjhSdFKQExZhvzPcRL2spAXDWFx63kFdASYQ9nDaX7ux/3r+SaAAtcii/V37QQt5vKgc4tpQRvJLo8i0Ay/qiC8iJFrSEO0kH0DR+xsm6nO78vKQCzKwEDWApRlYs9EtJBRhvHV8E+RojOynYvEkFAFDC2y0pJX3YtPNGkzGRaAB9i2PRgdBAaItqimvfW3xvEl0c1pY34GvxjQr0hGclUpCs8qgAIT3dAFB1lZ7KfSkFMEbNDoGhdQIOLQQCD1IKgJc1FI/CoyDuwvuFhakDAIwM8yXwJTTadSVeh8dhTxkAHizL4rbAIoBSlKUH9z5JNIAt3kN/t386+0zWHHBx3ZGK7Oosprr8n1MCADDV5e/Lqc7MATkRsmqyqjPT/F3TH1ICAFDqKusMLgeqgHwAQc7mVGceTndldM58mln9F4DoN6Ioyq3LTTug73+N4mqE/c2mrBsDLcNmZNbpzs+z1B4PqBmU6rFZqnugdTjqn3bbAAA1nhp9cn7iBcKtCHtJoRq1Bb3RaDcC6+V6L5C5qemXQJvRZDbsGCCskvqiu8Bj4M8JKTClFG3ABYRzMZauWjoFZoM5EjZib8M4Gmw2n61pqgLoDXsKshEexikH0GVNqiKNHQEADDUODQ02m6eVSC3wY7vrNKzZhACEpHxNvo60ufQSJXKT9ZNTxU4zMrsa/OsM2dE3EE/F7uICTVGrwAXqFBt3jglLcdlsMfuTChAph8dht8/bS22ooyzq74x2I5DMvl3tSL8B3aPd8QZw0jwAAAAASUVORK5CYII="
+                alt="phone"
+                width="24"
+                height="24"
+              />
+              <div class="phone-box__text">
+                <a href="tel:+79991001488">8 (999) 100 1488</a>
+                <span class="time-work">без выходных: с 9:00 до 21:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header-box__nav">
+            <nav>
+              <ul>
+                <li>
+                  <a href="../services.html">Услуги</a>
+                </li>
+                <li>
+                  <a href="../cars.html">Марки авто</a>
+                </li>
+                <li>
+                  <a href="../about.html">О нас</a>
+                </li>
+                <li>
+                  <a href="../sales.html">Акции</a>
+                </li>
+                <li>
+                  <a href="../contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-box__callback">
+            <button type="button" data-modal-open="callback">
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero__inner container">
+    <div class="page-hero__content">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="../">Главная</a>
+        <span>/</span>
+        <a href="../cars.html">Марки авто</a>
+        <span>/</span>
+        <span>Nissan</span>
+      </nav>
+      <h1 class="page-hero__title">Ремонт Nissan</h1>
+    </div>
+  </div>
+</section>
+
+<!-- ДЕТАЛИ + ФОРМА -->
+<section class="service-detail">
+  <div class="service-detail__inner container">
+    <div class="service-detail__content">
+      <h2 class="service-detail__title">Что мы делаем</h2>
+      <div class="service-detail__text">
+        <p>
+          Nissan — популярная марка в России. Мы обслуживаем модели Qashqai,
+          X-Trail, Almera, Teana и другие.
+        </p>
+        <ul>
+          <li>Плановое техническое обслуживание</li>
+          <li>Ремонт двигателя и трансмиссии</li>
+          <li>Диагностика электрооборудования</li>
+          <li>Ремонт подвески и тормозной системы</li>
+          <li>Замена технических жидкостей</li>
+        </ul>
+        <p>
+          Используем оригинальные запчасти Nissan и рекомендованные
+          производителем масла. Даём гарантию на все работы.
+        </p>
+      </div>
+      <div class="service-detail__image">
+        <img src="data:image/png;base64,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" alt="Nissan" />
+      </div>
+    </div>
+
+    <form class="service-detail__form" id="service-form">
+      <h3 class="service-detail__form-title">Оставить заявку</h3>
+      <p class="service-detail__form-text">Перезвоним в течение 15 минут</p>
+
+      <div class="service-detail__field">
+        <label class="service-detail__label" for="service-type">Услуга</label>
+        <select class="service-detail__select" id="service-type" name="service" required>
+          <option value="">Выберите услугу</option>
+          <option value="to">Техническое обслуживание</option>
+          <option value="electrical">Ремонт электрооборудования</option>
+          <option value="transmission">Ремонт трансмиссии</option>
+          <option value="diagnostics">Диагностика</option>
+          <option value="cooling">Ремонт системы охлаждения</option>
+        </select>
+      </div>
+
+      <div class="service-detail__field">
+        <label class="service-detail__label" for="service-name">Ваше имя</label>
+        <input class="service-detail__input" type="text" id="service-name" name="name" placeholder="Иван Иванов" required />
+      </div>
+
+      <div class="service-detail__field">
+        <label class="service-detail__label" for="service-phone">Телефон</label>
+        <input class="service-detail__input" type="tel" id="service-phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+      </div>
+
+      <button class="service-detail__submit" type="submit">Отправить заявку</button>
+
+      <label class="service-detail__checkbox">
+        <input type="checkbox" name="agreement" required />
+        <span>Согласен на обработку персональных данных</span>
+      </label>
+    </form>
+  </div>
+</section>
+    </main>
+           <footer>
+      <div class="footer__inner container">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <div class="logo-box">
+              <a href="../" class="site-link">
+              <img src="/bx-aservice/assets/gears-BOB79LJm.png" alt="logo" />
+              <p class="site-name">
+                <span class="site-name__small">life</span>
+                <span class="site-name__big">АКПП</span>
+              </p>
+            </a>
+            </div>
+            <p class="logo-description">
+              Специализированный автосервис в Магадане
+            </p>
+          </div>
+          <div class="footer__nav">
+            <nav>
+              <ul>
+                <li>
+                  <a href="../services">Услуги</a>
+                </li>
+                <li>
+                  <a href="../brands">Марки авто</a>
+                </li>
+                <li>
+                  <a href="../about">О нас</a>
+                </li>
+                <li>
+                  <a href="../sales">Акции</a>
+                </li>
+                <li>
+                  <a href="../contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__services">
+            <ul>
+              <li>
+                <a href="../">Техническое обслуживание</a>
+              </li>
+              <li>
+                <a href="../">Ремонт электрооборудования</a>
+              </li>
+              <li>
+                <a href="../">Ремонт трансмиссии</a>
+              </li>
+              <li>
+                <a href="../">Диагностика</a>
+              </li>
+              <li>
+                <a href="../">Ремонт системы охлаждения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <div class="phone-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAqpJREFUWIXtlktIVFEcxn//OzcaMyPw0cZoQs3XGKKUZS0sYqCoNhEILWpTbROcaDmbSHykUAjVskXJQJs2YRHVwlfYxq5zlQgVF6Yj+JhRfN3TwpmcdGYQm5k2frv/d7/D9+Nyz7kHdvWfJVHd69iKjhSdFKQExZhvzPcRL2spAXDWFx63kFdASYQ9nDaX7ux/3r+SaAAtcii/V37QQt5vKgc4tpQRvJLo8i0Ay/qiC8iJFrSEO0kH0DR+xsm6nO78vKQCzKwEDWApRlYs9EtJBRhvHV8E+RojOynYvEkFAFDC2y0pJX3YtPNGkzGRaAB9i2PRgdBAaItqimvfW3xvEl0c1pY34GvxjQr0hGclUpCs8qgAIT3dAFB1lZ7KfSkFMEbNDoGhdQIOLQQCD1IKgJc1FI/CoyDuwvuFhakDAIwM8yXwJTTadSVeh8dhTxkAHizL4rbAIoBSlKUH9z5JNIAt3kN/t386+0zWHHBx3ZGK7Oosprr8n1MCADDV5e/Lqc7MATkRsmqyqjPT/F3TH1ICAFDqKusMLgeqgHwAQc7mVGceTndldM58mln9F4DoN6Ioyq3LTTug73+N4mqE/c2mrBsDLcNmZNbpzs+z1B4PqBmU6rFZqnugdTjqn3bbAAA1nhp9cn7iBcKtCHtJoRq1Bb3RaDcC6+V6L5C5qemXQJvRZDbsGCCskvqiu8Bj4M8JKTClFG3ABYRzMZauWjoFZoM5EjZib8M4Gmw2n61pqgLoDXsKshEexikH0GVNqiKNHQEADDUODQ02m6eVSC3wY7vrNKzZhACEpHxNvo60ufQSJXKT9ZNTxU4zMrsa/OsM2dE3EE/F7uICTVGrwAXqFBt3jglLcdlsMfuTChAph8dht8/bS22ooyzq74x2I5DMvl3tSL8B3aPd8QZw0jwAAAAASUVORK5CYII="
+                alt="phone"
+                width="24"
+                height="24"
+              />
+              <div class="phone-box__text">
+                <a href="tel:+79991001488">8 (999) 100 1488</a>
+                <span class="time-work">без выходных: с 9:00 до 21:00</span>
+              </div>
+            </div>
+            <div class="addres-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAnFJREFUSImVlM1LFGEcxz+/mWVX280sVDpVB7F118jo0gsRUvQCEUWHyC6ehUp0K0K6dbHd9hJhdLIX8R8IIsFeLt4sUnd3FkrxZGVWrkViu/N0CZyZndnZ/R2/r8/vGZ4RfCY6EN2vCT0gx0Dt+A8voJhQmozkkrl3lfziRcR74xG1yRwGdbmCTgk81Qn2Tqemf1dd0NnX2bge+PMapLPS6Szzfk1f75obmltxEpqbej2wNlZDOMC+UDH4zI0oK2hPtJ8HTrmJBVYA96sQzsT7d5/1LQB11cU8A9qBTMrYml0wtmjCSWChzKnJNZdDbUzrldaGYCiwDAQs8LKI3pFJZj5btbGbsTglcwoIWeBiSVPb8nfzq64b1IX0XY5wgFFnOEB2KJtBeOmAA5qp7bQCtgIlbHYGictVbHAy78R0UzV4FhSFb06DUuzxKjCV2uvESroseRbk5/MfgVWbQ+iO97eVBcUG2k4LHLVLWcmFc58cmMOYiI4C3XZU/VRKG9RMbRyNoKJ0DuE2UGdTweNcyuixYs4PiqlIa8Ile7k0iqgHSi855bZ8HZV2gmXvwLhnTAFjlZI8ZmQ2lZ/2LQAQ0QeAQg3hBVWUQTdCdwOXJpd+tRxuAjheTbpAIps2XrlxrhsAENbTAvkq8mebI9sfVij3no7r0ROmKnut1lGm0GUkjbdeAu8NgNmkMa4Uzz3T4UmlcN8CAF0r9gFrLlSBotzy9fsJvk5+/9F8qCkMHLEz6kYubUz4+X03AKiPhO9g/ekpMvWFyHA1Xt8NABbfLP5tOdj0BeECoDTh4of7M3PVeGsZiSWiL9oT0Ue1mP4BYaHEHWfWG4wAAAAASUVORK5CYII="
+                alt="icon"
+                width="24"
+                height="24"
+              />
+              <p>Город,улица,дом</p>
+            </div>
+            <div class="mail-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABEVJREFUeJztmE+IG2UUwH9vEvQSD+Lunr0lk0jxslJdVKSLF29SC7K10hW2uqfKJtKFLYSu1cUkoDfbWtstKgXXowcRFZZSeuqhMJuJB2GP4oqXRVDJPA+7sZNJJn8mM5kszg8CmTfffHnvx/u+mQwkJCQkJCQkJCQk/C8R90GulHvRUJYQjqM8HldSkSD8gXJPVa7Ua/Xth2GgUC48ovvNT4GzsSU4RgS9Tia9bJWtv9MA7DevAWfiTWt8KPIW+00DWJSnSrmXHeW7uJOKBceYT6vydp9hNxT5aiwJhYworyO66DvAcN5Jq/Ac2mMSOAPOjzvVxhcR5BgZ+ZXsgoi82aM0gDkDZdoTvO8+UEgJcjNfzJ4OOcfIOCx+UyHlOXXfczxjAEZbSIzzCpvuUEuCWTInfqPMF7OnELnpLV7gtqq86xluGJ4AQtOpZ+zFbhIM1c8nWUK+mD0F8iWQdscFblu79mnDcJreazoEAFDmyEnoVzxf01E8+AmAIyUhaPHQSwAcCQmjFA/9BMBESxi1eBhEAEykhDCKh0EFwERJCKt4GEYA9JewYr4x1HwBCLN4GFYA9JYgeiNKCWEXD0EEQCwSoigeggqAsUqIqngYRQCMRUKUxcOoAiBSCVEXD2EIALeEB+5wS0J+Jbsw7JT5leyCHLyIaSte4YGVsRfCKB7CEgCY+9mywDFvXCElIpvDdILfX1oAgWOFfXNj1HxbhCLALGYvCXLR7/wwy8Gv7dvn01KhaH4UMN02RhZQKJnrPsV3vFnqtxz82t4718F8WiqUzPVASbsYSYBZzF5S1TVvXNG1nYw92/XNks9y6PUmZ2fXfgal2PE7qmujdkJgAX5tr+havdq4PMzdYZDdfqdm17pKGHE5BBLg1/YirNarjcv/BQ4lCNxyj2tJKJRyF/LF3Gq3the45d3td2p2TYRV7++OshyGFtCr7a2K3bk7l3GsjH22Wyeo8iHwQbe2t3btRco43umsir0R5nIYSkDftvfDZzl0Y5CHnDCXw8ACBm57Px5KuOY7Rrg66ENOWMthIAGFkrnere1FWO3a9n6UcepVe0lUXwO2gT8PP9sinNyp2Oe6tb0fVsXe6CpBdW1QCb4PGy163uoqjUBPZFatsQVsBbm2Y66KvZFfyf2DUG3L72BPeNSq1t/rdX3PDgi85sfMKHuCr4CjUnyLoBIkX8w1cYkw4CUVORHKmo+BQil34fD22oaIvC+qPzjwkyvspKbnppaBTCuiyixwsnOCyS8e4Le7e3dm5qb+AuY9p15QZRZhxhX7Vcxi7huBV3tNKvCtg3wcerYRYqDnFV7pM2xLzKI5L+j3Y8lqwhD0RGrv7t4v089OPYnwdNwJjRNBr1vVxicGgDyWOiein8Wd1NgQrpJJLx98dZEv5Z9HdQn0OPBELMlFx+8g90SbV6zaz3fiTiYhISEhISEhISEhZv4FxxKTQqg2CKYAAAAASUVORK5CYII="
+                alt="icon"
+                width="24"
+                height="24"
+              />
+              <a href="mailto:info@example.ru">info@example.ru</a>
+            </div>
+            <div class="header-box__socmedia">
+              <a href="https://telegram.org" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABLlJREFUeJztmk1oHVUUx88NoY3GfthAU4sQSysNSrsJKLYiah8UxFZBsjRdSINCIRuluFAEXWhxo/iVhS6CiHShRfEDoinWj2KspIilHwslbVE0fpFGW5s0PxczL71vMu+9e2fOzFV8v1Uyc+8553/enTv3njsi/wOA1cBDwFvJe+0hAioLoE9EBkWkT0Q6RWQi2aat7KCKBlgC9AOjInJERLriW70iMh4usoIB1gB7gbNETAOPACe5zC2h41QH6ANGgIuW0AngHuCMde0icEXoeFUAlsbD/DCLGQHuBH5JXD8SOu7cAGuBJ4CpFOHngd3ATuCvlPsvho4/M8CtwH5gNkUYwClgM7CrQZtdoXV4AXQAA8A3dQRVOQCsJJoA5xu06w2tyQlgPfA08GsT4bOx6Dbg2SZt/wD+va98wAAVomE+10QMRLP7FqJ3/hsO7UdDa0wFWAYMAsccRFQZA7qBTuADxz5PhdZaA3A90TD/3UP4fNynDVgFfOHRd2dozRIHXgHepfFklcYUsD220wOc8Ox/TUjhK4Ah4DvPoKuMAz2xrRupXd25MBlKeC/wHDCTUTjAMLAktnczi1d3LuwvU3QbsAMYxX+Y20wD/ZbdHaSv7lx4uAzhq4neyZM5RFeZADZYtgeov7pz4bYihfcRDdOsv06SEeBKy/4Q+UbSHHCVtuiFgkN+vQucB3ZbPgywT8HuUU3h1YKD7yzcjFPAZstPO/Caku1hDeFpBQctDgArLV+dwPuK9h/IKrpRwUGD6kbGWD5XAZ8r+9nkK7xRwUGLM8CWhN8e4LiynxnArepN84KDFmNAd8L3DcDpAnwddBX/IH6bkizMAY+T2JMDW4HfCvK5zykBcSDVZz7vCi6NhY1MwufdwJ/Kvmzuc05AIrCNRNvOnxWCGAeuS/FxP8W8VWyuzZQAK8i8o2JhI5OwOwRc0tOZyg+5xKcEXS1g/OTgvGYjY9kwwDMFirZ5WzUBlgh7GZw2Kmo2Mla/duDVksQDPFpIAhKi1gOvJByn/fLaqzsXthWegFjcMmons5cT968GPitZ/CVguauGXLVyY8w5EfnKulSxxK8VkU9EZGseHxk4YYyZdm2scVhg19w3AOvivz8UEb+1uA5e3wBoJODjxP/biFZ8GxVsZ+FLn8YaCTgsIvaQq4hIt4gsWgOURLkJMMbMicin1qWKiPTktZuRCyLyrU8HrQND+zHoEpG7lOz68rUxZtang1YCkoePA0p2ffH+CEorAcdE5Efr/1CPgNfzL6KUAGMMIjKmYSsnwUaAiMhHGfpMighK/qeMMd/7dtJMgO9HCIckWihtF5GzCv69h786uB9bH8Q6sSE6QR7OuQd4LKT2qpAXHAJ9D+io07+fbCfAkFJ2Kx3g3iZBvgMsbWJjDdFHFD7MA12N7JYC0VCuV1p/E8c6PVH1aBA455iAk0Vrc4b006TXXcUnbK0DDjkkYKQILZkAnkwEN0yOb/SIyml7gb8bJGCPpoZcALdbgb2Edf6X0+4m4GidBNyk4UMFosLpDD4nM+62O4iq03ZZ/QJNJtbSAQrdDQJ3cPlznPALoBAAy+P55fnQsQQFWBE6hhYtWrRo0aJFi/8k/wCiSmYDPZq8FQAAAABJRU5ErkJggg=="
+                  alt="tg"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a href="https://max.ru/" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR42uVbWUhVURRVG7SBLKGUPiILoSjDDCpKpQJpMiWlDysKBSvBMohQkvyoLKOJChr8KIOQPkLLoigpqbS0+jCKirSizCJSskFK007r4Hlxk+cb7j7nnndfCxY4cNfZe79zz7D3fgEBmsAYCwcngDPA6eLnUQH+Bjg1GVwDHgZvgc1gF+sfHeBjsAzcAkbbzeFAcL5w+BWTg5fgQTDelx0fAa4DnzC1eCRm1EBfcXwYWAC2M2vRKAIRqNP5VeB7phfXwUirHR8Nnme+g+/gJktmAwaZDX5gvokz4GCVzq8Q25Qvo5bPUBXOZ4O/mT3wnB+0ZDq/Fuxh9gLfLkfKcD4J7Gb2RBVpTcDDUeBnZm+UmHV+iAWnOquQYiYAxcx/8AmM8Mb5GPAX8y9UeBOAOwoM4FtoNZgPLhHrSwTPAYhcQCKYA14QJzsViPPE+UTJg/KZdASc6MUHEAxmgE8l23Lbk8HvShywHpxG2IWCwCzwi0SbFrsacJbEgc6BIZIOYuPAOkl23XA1UImkQU7KvplBb7i4+lLBT7Tj+0tsyJhqV1Vla/ipDqyRYGOhM/FkCcItYKji6/hYCdfxJmfCxyUEIM2ihEyKBFuj+oq+JgretDgrVU20N8MoFqF0e1ETgDiivaeMYgslJCACA6yvPzRRbDaK5REDsFtTVnoHwWZenQqStf/P1RSABKLd4Q6hSoJIp9JMrOsAhBEDEOsQqqfk3jRXpj4SbF/qEGkkiFzUHIC3BNuTHCKU1fSY5gA0E2xPlBGAfZpL8V8JtifIeAWKNQYgkrgIznQIPbDbGUDYvVzWNniFILJTYwDOEuxuNQqVEoSKNDZmfCPYXWMUKyAIndAUgDxpFSP8kkoQKtd0AqSW7NKNgpMIQg0aAlBGdL7rn8qx2E/bTIp1/L1VWeP8BhlVY2fClwiCUyxyPs1Nk6WnyHEmnk8QXG9RR5qMeuUP5qyFBn+MJ4hWuiixDyY6PlTUGWShtL+BQsCfhJxAWB+9MeA9ccxONVkWW81622Rlocfl60osOhQadOaAb/r8/yGY665OLyrF28BnCqrDZe6ivouYGSoCT7t5V7vFrOBl8AP8ICWmOD+Ov2Pq0OG0JKa4NO5LyPd0wen0Q+fvg4M8XXxq/cz5dq+aqfn93o+c52vRIquTDL4C3pOUZbYbwx+cz6Wcvlpt7DzfZrOp5+46mzrPM0TLdOfadIG39U6VdfPaY7OVfr+sjjRHALabMKQCPGRxaz0/s8SouHtv9NIQ/soEi2djxcVHJRrAZJXJB087xnhdbqWT5weIvt8WiU7zI3o5uEB5N4rIDbxgrr+0uJXn5j3o+c1kvQ2OZrI5beLVyrT8i9Xi293FonOcT+lr4F5wnplPAM+Eimc3g0dZ7/cOqwy8LAo0/EqdDkZbmWz9b/EHXwo/j1QjQJgAAAAASUVORK5CYII="
+                  alt="max"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="../" class="political-page">Политика обработки данных</a>
+          <div class="copyright">
+            <span class="date">@2026</span>
+            <div class="site-name">
+              <span class="site-name__small">life</span>
+              <span class="site-name__big">АКПП</span>
+            </div>
+          </div>
+          <p clas="author">
+            <a href="https://github.com/DmPe91">DmPe91</a>
+          </p>
+        </div>
+      </div>
+        </footer>
+
+    <!-- Модальное окно: Заказать звонок -->
+    <div class="modal" id="callback-modal" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+
+      <div
+        class="modal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="callback-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Закрыть"
+          data-modal-close
+        >
+          &times;
+        </button>
+
+        <h2 class="modal__title" id="callback-title">Заказать звонок</h2>
+
+        <form class="modal__form" id="callback-form" novalidate>
+          <div class="modal__field">
+            <label class="modal__label" for="callback-name">Имя</label>
+            <input
+              class="modal__input"
+              type="text"
+              id="callback-name"
+              name="name"
+              placeholder="Как к вам обращаться"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label class="modal__label" for="callback-phone">Телефон</label>
+            <input
+              class="modal__input"
+              type="tel"
+              id="callback-phone"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label class="modal__label" for="callback-message">Сообщение</label>
+            <textarea
+              class="modal__textarea"
+              id="callback-message"
+              name="message"
+              rows="4"
+              placeholder="Опишите проблему или вопрос"
+            ></textarea>
+          </div>
+
+          <label class="modal__checkbox">
+            <input
+              class="modal__checkbox-input"
+              type="checkbox"
+              name="agreement"
+              required
+            />
+            <span class="modal__checkbox-text">
+              Я согласен на обработку персональных данных
+            </span>
+          </label>
+
+          <button class="modal__submit" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="offcanvas" id="offcanvas">
+      <div class="offcanvas__header">
+        <span class="site-name">
+          <span class="site-name__small">life</span>
+          <span class="site-name__big">АКПП</span>
+        </span>
+        <button class="offcanvas__close" type="button" aria-label="Закрыть">
+          &times;
+        </button>
+      </div>
+
+      <nav class="offcanvas__nav">
+        <ul class="offcanvas-menu">
+          <li>
+            <a href="../services.html">Услуги</a>
+          </li>
+          <li>
+            <a href="../cars.html">Марки авто</a>
+          </li>
+          <li>
+            <a href="../about.html">О нас</a>
+          </li>
+          <li>
+            <a href="../sales.html">Акции</a>
+          </li>
+          <li>
+            <a href="../contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="offcanvas__contacts">
+        <a href="tel:+79991001488">8 (999) 100 1488</a>
+      </div>
+      <div class="header-box__socmedia">
+        <a href="https://telegram.org" class="animated_icon">
+          <img
+            src="src/assets/images/telegram.png"
+            alt="tg"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://max.ru/" class="animated_icon">
+          <img
+            src="src/assets/images/Max_logo-64x64.png"
+            alt="max"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

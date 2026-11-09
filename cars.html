@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life АКПП — Название страницы</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script type="module" crossorigin src="/bx-aservice/assets/main-BKtRsQxq.js"></script>
+    <link rel="stylesheet" crossorigin href="/bx-aservice/assets/main-D1_Xxz4y.css">
+  </head>
+  <body>
+    <header>
+      <div class="header__inner container">
+        <div class="header__top">
+          <button class="burger" type="button" aria-label="Меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <div class="header__logo">
+            <img src="/bx-aservice/assets/gears-BOB79LJm.png" alt="logo" />
+            <p class="site-name">
+              <span class="site-name__small text-sm">life</span>
+              <span class="site-name__big h3">АКПП</span>
+            </p>
+          </div>
+          <div class="header-box">
+            <div class="addres-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAnFJREFUSImVlM1LFGEcxz+/mWVX280sVDpVB7F118jo0gsRUvQCEUWHyC6ehUp0K0K6dbHd9hJhdLIX8R8IIsFeLt4sUnd3FkrxZGVWrkViu/N0CZyZndnZ/R2/r8/vGZ4RfCY6EN2vCT0gx0Dt+A8voJhQmozkkrl3lfziRcR74xG1yRwGdbmCTgk81Qn2Tqemf1dd0NnX2bge+PMapLPS6Szzfk1f75obmltxEpqbej2wNlZDOMC+UDH4zI0oK2hPtJ8HTrmJBVYA96sQzsT7d5/1LQB11cU8A9qBTMrYml0wtmjCSWChzKnJNZdDbUzrldaGYCiwDAQs8LKI3pFJZj5btbGbsTglcwoIWeBiSVPb8nfzq64b1IX0XY5wgFFnOEB2KJtBeOmAA5qp7bQCtgIlbHYGictVbHAy78R0UzV4FhSFb06DUuzxKjCV2uvESroseRbk5/MfgVWbQ+iO97eVBcUG2k4LHLVLWcmFc58cmMOYiI4C3XZU/VRKG9RMbRyNoKJ0DuE2UGdTweNcyuixYs4PiqlIa8Ile7k0iqgHSi855bZ8HZV2gmXvwLhnTAFjlZI8ZmQ2lZ/2LQAQ0QeAQg3hBVWUQTdCdwOXJpd+tRxuAjheTbpAIps2XrlxrhsAENbTAvkq8mebI9sfVij3no7r0ROmKnut1lGm0GUkjbdeAu8NgNmkMa4Uzz3T4UmlcN8CAF0r9gFrLlSBotzy9fsJvk5+/9F8qCkMHLEz6kYubUz4+X03AKiPhO9g/ekpMvWFyHA1Xt8NABbfLP5tOdj0BeECoDTh4of7M3PVeGsZiSWiL9oT0Ue1mP4BYaHEHWfWG4wAAAAASUVORK5CYII="
+                alt="icon"
+                width="24"
+                height="24"
+              />
+              <p>Город,улица,дом</p>
+            </div>
+            <div class="header-box__socmedia">
+              <a href="https://telegram.org" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABLlJREFUeJztmk1oHVUUx88NoY3GfthAU4sQSysNSrsJKLYiah8UxFZBsjRdSINCIRuluFAEXWhxo/iVhS6CiHShRfEDoinWj2KspIilHwslbVE0fpFGW5s0PxczL71vMu+9e2fOzFV8v1Uyc+8553/enTv3njsi/wOA1cBDwFvJe+0hAioLoE9EBkWkT0Q6RWQi2aat7KCKBlgC9AOjInJERLriW70iMh4usoIB1gB7gbNETAOPACe5zC2h41QH6ANGgIuW0AngHuCMde0icEXoeFUAlsbD/DCLGQHuBH5JXD8SOu7cAGuBJ4CpFOHngd3ATuCvlPsvho4/M8CtwH5gNkUYwClgM7CrQZtdoXV4AXQAA8A3dQRVOQCsJJoA5xu06w2tyQlgPfA08GsT4bOx6Dbg2SZt/wD+va98wAAVomE+10QMRLP7FqJ3/hsO7UdDa0wFWAYMAsccRFQZA7qBTuADxz5PhdZaA3A90TD/3UP4fNynDVgFfOHRd2dozRIHXgHepfFklcYUsD220wOc8Ox/TUjhK4Ah4DvPoKuMAz2xrRupXd25MBlKeC/wHDCTUTjAMLAktnczi1d3LuwvU3QbsAMYxX+Y20wD/ZbdHaSv7lx4uAzhq4neyZM5RFeZADZYtgeov7pz4bYihfcRDdOsv06SEeBKy/4Q+UbSHHCVtuiFgkN+vQucB3ZbPgywT8HuUU3h1YKD7yzcjFPAZstPO/Caku1hDeFpBQctDgArLV+dwPuK9h/IKrpRwUGD6kbGWD5XAZ8r+9nkK7xRwUGLM8CWhN8e4LiynxnArepN84KDFmNAd8L3DcDpAnwddBX/IH6bkizMAY+T2JMDW4HfCvK5zykBcSDVZz7vCi6NhY1MwufdwJ/Kvmzuc05AIrCNRNvOnxWCGAeuS/FxP8W8VWyuzZQAK8i8o2JhI5OwOwRc0tOZyg+5xKcEXS1g/OTgvGYjY9kwwDMFirZ5WzUBlgh7GZw2Kmo2Mla/duDVksQDPFpIAhKi1gOvJByn/fLaqzsXthWegFjcMmons5cT968GPitZ/CVguauGXLVyY8w5EfnKulSxxK8VkU9EZGseHxk4YYyZdm2scVhg19w3AOvivz8UEb+1uA5e3wBoJODjxP/biFZ8GxVsZ+FLn8YaCTgsIvaQq4hIt4gsWgOURLkJMMbMicin1qWKiPTktZuRCyLyrU8HrQND+zHoEpG7lOz68rUxZtang1YCkoePA0p2ffH+CEorAcdE5Efr/1CPgNfzL6KUAGMMIjKmYSsnwUaAiMhHGfpMighK/qeMMd/7dtJMgO9HCIckWihtF5GzCv69h786uB9bH8Q6sSE6QR7OuQd4LKT2qpAXHAJ9D+io07+fbCfAkFJ2Kx3g3iZBvgMsbWJjDdFHFD7MA12N7JYC0VCuV1p/E8c6PVH1aBA455iAk0Vrc4b006TXXcUnbK0DDjkkYKQILZkAnkwEN0yOb/SIyml7gb8bJGCPpoZcALdbgb2Edf6X0+4m4GidBNyk4UMFosLpDD4nM+62O4iq03ZZ/QJNJtbSAQrdDQJ3cPlznPALoBAAy+P55fnQsQQFWBE6hhYtWrRo0aJFi/8k/wCiSmYDPZq8FQAAAABJRU5ErkJggg=="
+                  alt="tg"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a href="https://max.ru/" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR42uVbWUhVURRVG7SBLKGUPiILoSjDDCpKpQJpMiWlDysKBSvBMohQkvyoLKOJChr8KIOQPkLLoigpqbS0+jCKirSizCJSskFK007r4Hlxk+cb7j7nnndfCxY4cNfZe79zz7D3fgEBmsAYCwcngDPA6eLnUQH+Bjg1GVwDHgZvgc1gF+sfHeBjsAzcAkbbzeFAcL5w+BWTg5fgQTDelx0fAa4DnzC1eCRm1EBfcXwYWAC2M2vRKAIRqNP5VeB7phfXwUirHR8Nnme+g+/gJktmAwaZDX5gvokz4GCVzq8Q25Qvo5bPUBXOZ4O/mT3wnB+0ZDq/Fuxh9gLfLkfKcD4J7Gb2RBVpTcDDUeBnZm+UmHV+iAWnOquQYiYAxcx/8AmM8Mb5GPAX8y9UeBOAOwoM4FtoNZgPLhHrSwTPAYhcQCKYA14QJzsViPPE+UTJg/KZdASc6MUHEAxmgE8l23Lbk8HvShywHpxG2IWCwCzwi0SbFrsacJbEgc6BIZIOYuPAOkl23XA1UImkQU7KvplBb7i4+lLBT7Tj+0tsyJhqV1Vla/ipDqyRYGOhM/FkCcItYKji6/hYCdfxJmfCxyUEIM2ihEyKBFuj+oq+JgretDgrVU20N8MoFqF0e1ETgDiivaeMYgslJCACA6yvPzRRbDaK5REDsFtTVnoHwWZenQqStf/P1RSABKLd4Q6hSoJIp9JMrOsAhBEDEOsQqqfk3jRXpj4SbF/qEGkkiFzUHIC3BNuTHCKU1fSY5gA0E2xPlBGAfZpL8V8JtifIeAWKNQYgkrgIznQIPbDbGUDYvVzWNniFILJTYwDOEuxuNQqVEoSKNDZmfCPYXWMUKyAIndAUgDxpFSP8kkoQKtd0AqSW7NKNgpMIQg0aAlBGdL7rn8qx2E/bTIp1/L1VWeP8BhlVY2fClwiCUyxyPs1Nk6WnyHEmnk8QXG9RR5qMeuUP5qyFBn+MJ4hWuiixDyY6PlTUGWShtL+BQsCfhJxAWB+9MeA9ccxONVkWW81622Rlocfl60osOhQadOaAb/r8/yGY665OLyrF28BnCqrDZe6ivouYGSoCT7t5V7vFrOBl8AP8ICWmOD+Ov2Pq0OG0JKa4NO5LyPd0wen0Q+fvg4M8XXxq/cz5dq+aqfn93o+c52vRIquTDL4C3pOUZbYbwx+cz6Wcvlpt7DzfZrOp5+46mzrPM0TLdOfadIG39U6VdfPaY7OVfr+sjjRHALabMKQCPGRxaz0/s8SouHtv9NIQ/soEi2djxcVHJRrAZJXJB087xnhdbqWT5weIvt8WiU7zI3o5uEB5N4rIDbxgrr+0uJXn5j3o+c1kvQ2OZrI5beLVyrT8i9Xi293FonOcT+lr4F5wnplPAM+Eimc3g0dZ7/cOqwy8LAo0/EqdDkZbmWz9b/EHXwo/j1QjQJgAAAAASUVORK5CYII="
+                  alt="max"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+            <div class="phone-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAqpJREFUWIXtlktIVFEcxn//OzcaMyPw0cZoQs3XGKKUZS0sYqCoNhEILWpTbROcaDmbSHykUAjVskXJQJs2YRHVwlfYxq5zlQgVF6Yj+JhRfN3TwpmcdGYQm5k2frv/d7/D9+Nyz7kHdvWfJVHd69iKjhSdFKQExZhvzPcRL2spAXDWFx63kFdASYQ9nDaX7ux/3r+SaAAtcii/V37QQt5vKgc4tpQRvJLo8i0Ay/qiC8iJFrSEO0kH0DR+xsm6nO78vKQCzKwEDWApRlYs9EtJBRhvHV8E+RojOynYvEkFAFDC2y0pJX3YtPNGkzGRaAB9i2PRgdBAaItqimvfW3xvEl0c1pY34GvxjQr0hGclUpCs8qgAIT3dAFB1lZ7KfSkFMEbNDoGhdQIOLQQCD1IKgJc1FI/CoyDuwvuFhakDAIwM8yXwJTTadSVeh8dhTxkAHizL4rbAIoBSlKUH9z5JNIAt3kN/t386+0zWHHBx3ZGK7Oosprr8n1MCADDV5e/Lqc7MATkRsmqyqjPT/F3TH1ICAFDqKusMLgeqgHwAQc7mVGceTndldM58mln9F4DoN6Ioyq3LTTug73+N4mqE/c2mrBsDLcNmZNbpzs+z1B4PqBmU6rFZqnugdTjqn3bbAAA1nhp9cn7iBcKtCHtJoRq1Bb3RaDcC6+V6L5C5qemXQJvRZDbsGCCskvqiu8Bj4M8JKTClFG3ABYRzMZauWjoFZoM5EjZib8M4Gmw2n61pqgLoDXsKshEexikH0GVNqiKNHQEADDUODQ02m6eVSC3wY7vrNKzZhACEpHxNvo60ufQSJXKT9ZNTxU4zMrsa/OsM2dE3EE/F7uICTVGrwAXqFBt3jglLcdlsMfuTChAph8dht8/bS22ooyzq74x2I5DMvl3tSL8B3aPd8QZw0jwAAAAASUVORK5CYII="
+                alt="phone"
+                width="24"
+                height="24"
+              />
+              <div class="phone-box__text">
+                <a href="tel:+79991001488">8 (999) 100 1488</a>
+                <span class="time-work">без выходных: с 9:00 до 21:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header-box__nav">
+            <nav>
+              <ul>
+                <li>
+                  <a href="services.html">Услуги</a>
+                </li>
+                <li>
+                  <a href="cars.html">Марки авто</a>
+                </li>
+                <li>
+                  <a href="about.html">О нас</a>
+                </li>
+                <li>
+                  <a href="sales.html">Акции</a>
+                </li>
+                <li>
+                  <a href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-box__callback">
+            <button type="button" data-modal-open="callback">
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================================
+         КОНТЕНТ СТРАНИЦЫ
+         ============================================ -->
+      <section class="page">
+        <div class="container">
+          <h1 class="page__title">Марки автомобилей</h1>
+          <p class="page__subtitle">
+            Работаем с японскими автомобилями всех марок
+          </p>
+           <div class="brands__grid">
+            <a href="cars/toyota.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="data:image/png;base64,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"
+                alt="Toyota"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Toyota</span>
+            </a>
+
+            <a href="cars/honda.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="/bx-aservice/assets/honda-DIMO6W5z.png"
+                alt="Honda"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Honda</span>
+            </a>
+
+            <a href="cars/nissan.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="data:image/png;base64,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"
+                alt="Nissan"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Nissan</span>
+            </a>
+
+            <a href="cars/mazda.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="/bx-aservice/assets/mazda-IhSuVswI.png"
+                alt="Mazda"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Mazda</span>
+            </a>
+
+            <a href="cars/mitsubishi.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="data:image/png;base64,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"
+                alt="Mitsubishi"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Mitsubishi</span>
+            </a>
+
+            <a href="cars/subaru.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="/bx-aservice/assets/subaru-CphJpGV4.png"
+                alt="Subaru"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Subaru</span>
+            </a>
+
+            <a href="cars/suzuki.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="data:image/png;base64,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"
+                alt="Suzuki"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Suzuki</span>
+            </a>
+
+            <a href="cars/lexus.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="/bx-aservice/assets/lexus-BhvIKOWQ.png"
+                alt="Lexus"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Lexus</span>
+            </a>
+
+            <a href="cars/infiniti.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="/bx-aservice/assets/infiniti-BqOo1ogv.png"
+                alt="Infiniti"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Infiniti</span>
+            </a>
+
+            <a href="cars/acura.html" class="brand-card">
+              <img
+                class="brand-card__logo"
+                src="/bx-aservice/assets/acura-BabIDVW9.png"
+                alt="Acura"
+                width="80"
+                height="80"
+              />
+              <span class="brand-card__name">Acura</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__inner container">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <div class="logo-box">
+              <img src="/bx-aservice/assets/gears-BOB79LJm.png" alt="logo" />
+              <p class="site-name">
+                <span class="site-name__small">life</span>
+                <span class="site-name__big">АКПП</span>
+              </p>
+            </div>
+            <p class="logo-description">
+              Специализированный автосервис в Магадане
+            </p>
+          </div>
+          <div class="footer__nav">
+            <nav>
+              <ul>
+                <li>
+                  <a href="services">Услуги</a>
+                </li>
+                <li>
+                  <a href="brands">Марки авто</a>
+                </li>
+                <li>
+                  <a href="about">О нас</a>
+                </li>
+                <li>
+                  <a href="sales">Акции</a>
+                </li>
+                <li>
+                  <a href="contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__services">
+            <ul>
+              <li>
+                <a href="./">Техническое обслуживание</a>
+              </li>
+              <li>
+                <a href="./">Ремонт электрооборудования</a>
+              </li>
+              <li>
+                <a href="./">Ремонт трансмиссии</a>
+              </li>
+              <li>
+                <a href="./">Диагностика</a>
+              </li>
+              <li>
+                <a href="./">Ремонт системы охлаждения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <div class="phone-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAqpJREFUWIXtlktIVFEcxn//OzcaMyPw0cZoQs3XGKKUZS0sYqCoNhEILWpTbROcaDmbSHykUAjVskXJQJs2YRHVwlfYxq5zlQgVF6Yj+JhRfN3TwpmcdGYQm5k2frv/d7/D9+Nyz7kHdvWfJVHd69iKjhSdFKQExZhvzPcRL2spAXDWFx63kFdASYQ9nDaX7ux/3r+SaAAtcii/V37QQt5vKgc4tpQRvJLo8i0Ay/qiC8iJFrSEO0kH0DR+xsm6nO78vKQCzKwEDWApRlYs9EtJBRhvHV8E+RojOynYvEkFAFDC2y0pJX3YtPNGkzGRaAB9i2PRgdBAaItqimvfW3xvEl0c1pY34GvxjQr0hGclUpCs8qgAIT3dAFB1lZ7KfSkFMEbNDoGhdQIOLQQCD1IKgJc1FI/CoyDuwvuFhakDAIwM8yXwJTTadSVeh8dhTxkAHizL4rbAIoBSlKUH9z5JNIAt3kN/t386+0zWHHBx3ZGK7Oosprr8n1MCADDV5e/Lqc7MATkRsmqyqjPT/F3TH1ICAFDqKusMLgeqgHwAQc7mVGceTndldM58mln9F4DoN6Ioyq3LTTug73+N4mqE/c2mrBsDLcNmZNbpzs+z1B4PqBmU6rFZqnugdTjqn3bbAAA1nhp9cn7iBcKtCHtJoRq1Bb3RaDcC6+V6L5C5qemXQJvRZDbsGCCskvqiu8Bj4M8JKTClFG3ABYRzMZauWjoFZoM5EjZib8M4Gmw2n61pqgLoDXsKshEexikH0GVNqiKNHQEADDUODQ02m6eVSC3wY7vrNKzZhACEpHxNvo60ufQSJXKT9ZNTxU4zMrsa/OsM2dE3EE/F7uICTVGrwAXqFBt3jglLcdlsMfuTChAph8dht8/bS22ooyzq74x2I5DMvl3tSL8B3aPd8QZw0jwAAAAASUVORK5CYII="
+                alt="phone"
+                width="24"
+                height="24"
+              />
+              <div class="phone-box__text">
+                <a href="tel:+79991001488">8 (999) 100 1488</a>
+                <span class="time-work">без выходных: с 9:00 до 21:00</span>
+              </div>
+            </div>
+            <div class="addres-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAnFJREFUSImVlM1LFGEcxz+/mWVX280sVDpVB7F118jo0gsRUvQCEUWHyC6ehUp0K0K6dbHd9hJhdLIX8R8IIsFeLt4sUnd3FkrxZGVWrkViu/N0CZyZndnZ/R2/r8/vGZ4RfCY6EN2vCT0gx0Dt+A8voJhQmozkkrl3lfziRcR74xG1yRwGdbmCTgk81Qn2Tqemf1dd0NnX2bge+PMapLPS6Szzfk1f75obmltxEpqbej2wNlZDOMC+UDH4zI0oK2hPtJ8HTrmJBVYA96sQzsT7d5/1LQB11cU8A9qBTMrYml0wtmjCSWChzKnJNZdDbUzrldaGYCiwDAQs8LKI3pFJZj5btbGbsTglcwoIWeBiSVPb8nfzq64b1IX0XY5wgFFnOEB2KJtBeOmAA5qp7bQCtgIlbHYGictVbHAy78R0UzV4FhSFb06DUuzxKjCV2uvESroseRbk5/MfgVWbQ+iO97eVBcUG2k4LHLVLWcmFc58cmMOYiI4C3XZU/VRKG9RMbRyNoKJ0DuE2UGdTweNcyuixYs4PiqlIa8Ile7k0iqgHSi855bZ8HZV2gmXvwLhnTAFjlZI8ZmQ2lZ/2LQAQ0QeAQg3hBVWUQTdCdwOXJpd+tRxuAjheTbpAIps2XrlxrhsAENbTAvkq8mebI9sfVij3no7r0ROmKnut1lGm0GUkjbdeAu8NgNmkMa4Uzz3T4UmlcN8CAF0r9gFrLlSBotzy9fsJvk5+/9F8qCkMHLEz6kYubUz4+X03AKiPhO9g/ekpMvWFyHA1Xt8NABbfLP5tOdj0BeECoDTh4of7M3PVeGsZiSWiL9oT0Ue1mP4BYaHEHWfWG4wAAAAASUVORK5CYII="
+                alt="icon"
+                width="24"
+                height="24"
+              />
+              <p>Город,улица,дом</p>
+            </div>
+            <div class="mail-box">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABEVJREFUeJztmE+IG2UUwH9vEvQSD+Lunr0lk0jxslJdVKSLF29SC7K10hW2uqfKJtKFLYSu1cUkoDfbWtstKgXXowcRFZZSeuqhMJuJB2GP4oqXRVDJPA+7sZNJJn8mM5kszg8CmTfffHnvx/u+mQwkJCQkJCQkJCQk/C8R90GulHvRUJYQjqM8HldSkSD8gXJPVa7Ua/Xth2GgUC48ovvNT4GzsSU4RgS9Tia9bJWtv9MA7DevAWfiTWt8KPIW+00DWJSnSrmXHeW7uJOKBceYT6vydp9hNxT5aiwJhYworyO66DvAcN5Jq/Ac2mMSOAPOjzvVxhcR5BgZ+ZXsgoi82aM0gDkDZdoTvO8+UEgJcjNfzJ4OOcfIOCx+UyHlOXXfczxjAEZbSIzzCpvuUEuCWTInfqPMF7OnELnpLV7gtqq86xluGJ4AQtOpZ+zFbhIM1c8nWUK+mD0F8iWQdscFblu79mnDcJreazoEAFDmyEnoVzxf01E8+AmAIyUhaPHQSwAcCQmjFA/9BMBESxi1eBhEAEykhDCKh0EFwERJCKt4GEYA9JewYr4x1HwBCLN4GFYA9JYgeiNKCWEXD0EEQCwSoigeggqAsUqIqngYRQCMRUKUxcOoAiBSCVEXD2EIALeEB+5wS0J+Jbsw7JT5leyCHLyIaSte4YGVsRfCKB7CEgCY+9mywDFvXCElIpvDdILfX1oAgWOFfXNj1HxbhCLALGYvCXLR7/wwy8Gv7dvn01KhaH4UMN02RhZQKJnrPsV3vFnqtxz82t4718F8WiqUzPVASbsYSYBZzF5S1TVvXNG1nYw92/XNks9y6PUmZ2fXfgal2PE7qmujdkJgAX5tr+havdq4PMzdYZDdfqdm17pKGHE5BBLg1/YirNarjcv/BQ4lCNxyj2tJKJRyF/LF3Gq3the45d3td2p2TYRV7++OshyGFtCr7a2K3bk7l3GsjH22Wyeo8iHwQbe2t3btRco43umsir0R5nIYSkDftvfDZzl0Y5CHnDCXw8ACBm57Px5KuOY7Rrg66ENOWMthIAGFkrnere1FWO3a9n6UcepVe0lUXwO2gT8PP9sinNyp2Oe6tb0fVsXe6CpBdW1QCb4PGy163uoqjUBPZFatsQVsBbm2Y66KvZFfyf2DUG3L72BPeNSq1t/rdX3PDgi85sfMKHuCr4CjUnyLoBIkX8w1cYkw4CUVORHKmo+BQil34fD22oaIvC+qPzjwkyvspKbnppaBTCuiyixwsnOCyS8e4Le7e3dm5qb+AuY9p15QZRZhxhX7Vcxi7huBV3tNKvCtg3wcerYRYqDnFV7pM2xLzKI5L+j3Y8lqwhD0RGrv7t4v089OPYnwdNwJjRNBr1vVxicGgDyWOiein8Wd1NgQrpJJLx98dZEv5Z9HdQn0OPBELMlFx+8g90SbV6zaz3fiTiYhISEhISEhISEhZv4FxxKTQqg2CKYAAAAASUVORK5CYII="
+                alt="icon"
+                width="24"
+                height="24"
+              />
+              <a href="mailto:info@example.ru">info@example.ru</a>
+            </div>
+            <div class="header-box__socmedia">
+              <a href="https://telegram.org" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABLlJREFUeJztmk1oHVUUx88NoY3GfthAU4sQSysNSrsJKLYiah8UxFZBsjRdSINCIRuluFAEXWhxo/iVhS6CiHShRfEDoinWj2KspIilHwslbVE0fpFGW5s0PxczL71vMu+9e2fOzFV8v1Uyc+8553/enTv3njsi/wOA1cBDwFvJe+0hAioLoE9EBkWkT0Q6RWQi2aat7KCKBlgC9AOjInJERLriW70iMh4usoIB1gB7gbNETAOPACe5zC2h41QH6ANGgIuW0AngHuCMde0icEXoeFUAlsbD/DCLGQHuBH5JXD8SOu7cAGuBJ4CpFOHngd3ATuCvlPsvho4/M8CtwH5gNkUYwClgM7CrQZtdoXV4AXQAA8A3dQRVOQCsJJoA5xu06w2tyQlgPfA08GsT4bOx6Dbg2SZt/wD+va98wAAVomE+10QMRLP7FqJ3/hsO7UdDa0wFWAYMAsccRFQZA7qBTuADxz5PhdZaA3A90TD/3UP4fNynDVgFfOHRd2dozRIHXgHepfFklcYUsD220wOc8Ox/TUjhK4Ah4DvPoKuMAz2xrRupXd25MBlKeC/wHDCTUTjAMLAktnczi1d3LuwvU3QbsAMYxX+Y20wD/ZbdHaSv7lx4uAzhq4neyZM5RFeZADZYtgeov7pz4bYihfcRDdOsv06SEeBKy/4Q+UbSHHCVtuiFgkN+vQucB3ZbPgywT8HuUU3h1YKD7yzcjFPAZstPO/Caku1hDeFpBQctDgArLV+dwPuK9h/IKrpRwUGD6kbGWD5XAZ8r+9nkK7xRwUGLM8CWhN8e4LiynxnArepN84KDFmNAd8L3DcDpAnwddBX/IH6bkizMAY+T2JMDW4HfCvK5zykBcSDVZz7vCi6NhY1MwufdwJ/Kvmzuc05AIrCNRNvOnxWCGAeuS/FxP8W8VWyuzZQAK8i8o2JhI5OwOwRc0tOZyg+5xKcEXS1g/OTgvGYjY9kwwDMFirZ5WzUBlgh7GZw2Kmo2Mla/duDVksQDPFpIAhKi1gOvJByn/fLaqzsXthWegFjcMmons5cT968GPitZ/CVguauGXLVyY8w5EfnKulSxxK8VkU9EZGseHxk4YYyZdm2scVhg19w3AOvivz8UEb+1uA5e3wBoJODjxP/biFZ8GxVsZ+FLn8YaCTgsIvaQq4hIt4gsWgOURLkJMMbMicin1qWKiPTktZuRCyLyrU8HrQND+zHoEpG7lOz68rUxZtang1YCkoePA0p2ffH+CEorAcdE5Efr/1CPgNfzL6KUAGMMIjKmYSsnwUaAiMhHGfpMighK/qeMMd/7dtJMgO9HCIckWihtF5GzCv69h786uB9bH8Q6sSE6QR7OuQd4LKT2qpAXHAJ9D+io07+fbCfAkFJ2Kx3g3iZBvgMsbWJjDdFHFD7MA12N7JYC0VCuV1p/E8c6PVH1aBA455iAk0Vrc4b006TXXcUnbK0DDjkkYKQILZkAnkwEN0yOb/SIyml7gb8bJGCPpoZcALdbgb2Edf6X0+4m4GidBNyk4UMFosLpDD4nM+62O4iq03ZZ/QJNJtbSAQrdDQJ3cPlznPALoBAAy+P55fnQsQQFWBE6hhYtWrRo0aJFi/8k/wCiSmYDPZq8FQAAAABJRU5ErkJggg=="
+                  alt="tg"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a href="https://max.ru/" class="animated_icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR42uVbWUhVURRVG7SBLKGUPiILoSjDDCpKpQJpMiWlDysKBSvBMohQkvyoLKOJChr8KIOQPkLLoigpqbS0+jCKirSizCJSskFK007r4Hlxk+cb7j7nnndfCxY4cNfZe79zz7D3fgEBmsAYCwcngDPA6eLnUQH+Bjg1GVwDHgZvgc1gF+sfHeBjsAzcAkbbzeFAcL5w+BWTg5fgQTDelx0fAa4DnzC1eCRm1EBfcXwYWAC2M2vRKAIRqNP5VeB7phfXwUirHR8Nnme+g+/gJktmAwaZDX5gvokz4GCVzq8Q25Qvo5bPUBXOZ4O/mT3wnB+0ZDq/Fuxh9gLfLkfKcD4J7Gb2RBVpTcDDUeBnZm+UmHV+iAWnOquQYiYAxcx/8AmM8Mb5GPAX8y9UeBOAOwoM4FtoNZgPLhHrSwTPAYhcQCKYA14QJzsViPPE+UTJg/KZdASc6MUHEAxmgE8l23Lbk8HvShywHpxG2IWCwCzwi0SbFrsacJbEgc6BIZIOYuPAOkl23XA1UImkQU7KvplBb7i4+lLBT7Tj+0tsyJhqV1Vla/ipDqyRYGOhM/FkCcItYKji6/hYCdfxJmfCxyUEIM2ihEyKBFuj+oq+JgretDgrVU20N8MoFqF0e1ETgDiivaeMYgslJCACA6yvPzRRbDaK5REDsFtTVnoHwWZenQqStf/P1RSABKLd4Q6hSoJIp9JMrOsAhBEDEOsQqqfk3jRXpj4SbF/qEGkkiFzUHIC3BNuTHCKU1fSY5gA0E2xPlBGAfZpL8V8JtifIeAWKNQYgkrgIznQIPbDbGUDYvVzWNniFILJTYwDOEuxuNQqVEoSKNDZmfCPYXWMUKyAIndAUgDxpFSP8kkoQKtd0AqSW7NKNgpMIQg0aAlBGdL7rn8qx2E/bTIp1/L1VWeP8BhlVY2fClwiCUyxyPs1Nk6WnyHEmnk8QXG9RR5qMeuUP5qyFBn+MJ4hWuiixDyY6PlTUGWShtL+BQsCfhJxAWB+9MeA9ccxONVkWW81622Rlocfl60osOhQadOaAb/r8/yGY665OLyrF28BnCqrDZe6ivouYGSoCT7t5V7vFrOBl8AP8ICWmOD+Ov2Pq0OG0JKa4NO5LyPd0wen0Q+fvg4M8XXxq/cz5dq+aqfn93o+c52vRIquTDL4C3pOUZbYbwx+cz6Wcvlpt7DzfZrOp5+46mzrPM0TLdOfadIG39U6VdfPaY7OVfr+sjjRHALabMKQCPGRxaz0/s8SouHtv9NIQ/soEi2djxcVHJRrAZJXJB087xnhdbqWT5weIvt8WiU7zI3o5uEB5N4rIDbxgrr+0uJXn5j3o+c1kvQ2OZrI5beLVyrT8i9Xi293FonOcT+lr4F5wnplPAM+Eimc3g0dZ7/cOqwy8LAo0/EqdDkZbmWz9b/EHXwo/j1QjQJgAAAAASUVORK5CYII="
+                  alt="max"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="./" class="political-page">Политика обработки данных</a>
+          <div class="copyright">
+            <span class="date">@2026</span>
+            <div class="site-name">
+              <span class="site-name__small">life</span>
+              <span class="site-name__big">АКПП</span>
+            </div>
+          </div>
+          <p clas="author">
+            <a href="https://github.com/DmPe91">DmPe91</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Модальное окно: Заказать звонок -->
+    <div class="modal" id="callback-modal" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close></div>
+
+      <div
+        class="modal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="callback-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Закрыть"
+          data-modal-close
+        >
+          &times;
+        </button>
+
+        <h2 class="modal__title" id="callback-title">Заказать звонок</h2>
+
+        <form class="modal__form" id="callback-form" novalidate>
+          <div class="modal__field">
+            <label class="modal__label" for="callback-name">Имя</label>
+            <input
+              class="modal__input"
+              type="text"
+              id="callback-name"
+              name="name"
+              placeholder="Как к вам обращаться"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label class="modal__label" for="callback-phone">Телефон</label>
+            <input
+              class="modal__input"
+              type="tel"
+              id="callback-phone"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label class="modal__label" for="callback-message">Сообщение</label>
+            <textarea
+              class="modal__textarea"
+              id="callback-message"
+              name="message"
+              rows="4"
+              placeholder="Опишите проблему или вопрос"
+            ></textarea>
+          </div>
+
+          <label class="modal__checkbox">
+            <input
+              class="modal__checkbox-input"
+              type="checkbox"
+              name="agreement"
+              required
+            />
+            <span class="modal__checkbox-text">
+              Я согласен на обработку персональных данных
+            </span>
+          </label>
+
+          <button class="modal__submit" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="offcanvas" id="offcanvas">
+      <div class="offcanvas__header">
+        <span class="site-name">
+          <span class="site-name__small">life</span>
+          <span class="site-name__big">АКПП</span>
+        </span>
+        <button class="offcanvas__close" type="button" aria-label="Закрыть">
+          &times;
+        </button>
+      </div>
+
+      <nav class="offcanvas__nav">
+        <ul class="offcanvas-menu">
+          <li>
+            <a href="src/pages/services.html">Услуги</a>
+          </li>
+          <li>
+            <a href="src/pages/cars.html">Марки авто</a>
+          </li>
+          <li>
+            <a href="src/pages/about.html">О нас</a>
+          </li>
+          <li>
+            <a href="src/pages/sales.html">Акции</a>
+          </li>
+          <li>
+            <a href="src/pages/contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="offcanvas__contacts">
+        <a href="tel:+79991001488">8 (999) 100 1488</a>
+      </div>
+      <div class="header-box__socmedia">
+        <a href="https://telegram.org" class="animated_icon">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABLlJREFUeJztmk1oHVUUx88NoY3GfthAU4sQSysNSrsJKLYiah8UxFZBsjRdSINCIRuluFAEXWhxo/iVhS6CiHShRfEDoinWj2KspIilHwslbVE0fpFGW5s0PxczL71vMu+9e2fOzFV8v1Uyc+8553/enTv3njsi/wOA1cBDwFvJe+0hAioLoE9EBkWkT0Q6RWQi2aat7KCKBlgC9AOjInJERLriW70iMh4usoIB1gB7gbNETAOPACe5zC2h41QH6ANGgIuW0AngHuCMde0icEXoeFUAlsbD/DCLGQHuBH5JXD8SOu7cAGuBJ4CpFOHngd3ATuCvlPsvho4/M8CtwH5gNkUYwClgM7CrQZtdoXV4AXQAA8A3dQRVOQCsJJoA5xu06w2tyQlgPfA08GsT4bOx6Dbg2SZt/wD+va98wAAVomE+10QMRLP7FqJ3/hsO7UdDa0wFWAYMAsccRFQZA7qBTuADxz5PhdZaA3A90TD/3UP4fNynDVgFfOHRd2dozRIHXgHepfFklcYUsD220wOc8Ox/TUjhK4Ah4DvPoKuMAz2xrRupXd25MBlKeC/wHDCTUTjAMLAktnczi1d3LuwvU3QbsAMYxX+Y20wD/ZbdHaSv7lx4uAzhq4neyZM5RFeZADZYtgeov7pz4bYihfcRDdOsv06SEeBKy/4Q+UbSHHCVtuiFgkN+vQucB3ZbPgywT8HuUU3h1YKD7yzcjFPAZstPO/Caku1hDeFpBQctDgArLV+dwPuK9h/IKrpRwUGD6kbGWD5XAZ8r+9nkK7xRwUGLM8CWhN8e4LiynxnArepN84KDFmNAd8L3DcDpAnwddBX/IH6bkizMAY+T2JMDW4HfCvK5zykBcSDVZz7vCi6NhY1MwufdwJ/Kvmzuc05AIrCNRNvOnxWCGAeuS/FxP8W8VWyuzZQAK8i8o2JhI5OwOwRc0tOZyg+5xKcEXS1g/OTgvGYjY9kwwDMFirZ5WzUBlgh7GZw2Kmo2Mla/duDVksQDPFpIAhKi1gOvJByn/fLaqzsXthWegFjcMmons5cT968GPitZ/CVguauGXLVyY8w5EfnKulSxxK8VkU9EZGseHxk4YYyZdm2scVhg19w3AOvivz8UEb+1uA5e3wBoJODjxP/biFZ8GxVsZ+FLn8YaCTgsIvaQq4hIt4gsWgOURLkJMMbMicin1qWKiPTktZuRCyLyrU8HrQND+zHoEpG7lOz68rUxZtang1YCkoePA0p2ffH+CEorAcdE5Efr/1CPgNfzL6KUAGMMIjKmYSsnwUaAiMhHGfpMighK/qeMMd/7dtJMgO9HCIckWihtF5GzCv69h786uB9bH8Q6sSE6QR7OuQd4LKT2qpAXHAJ9D+io07+fbCfAkFJ2Kx3g3iZBvgMsbWJjDdFHFD7MA12N7JYC0VCuV1p/E8c6PVH1aBA455iAk0Vrc4b006TXXcUnbK0DDjkkYKQILZkAnkwEN0yOb/SIyml7gb8bJGCPpoZcALdbgb2Edf6X0+4m4GidBNyk4UMFosLpDD4nM+62O4iq03ZZ/QJNJtbSAQrdDQJ3cPlznPALoBAAy+P55fnQsQQFWBE6hhYtWrRo0aJFi/8k/wCiSmYDPZq8FQAAAABJRU5ErkJggg=="
+            alt="tg"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href="https://max.ru/" class="animated_icon">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR42uVbWUhVURRVG7SBLKGUPiILoSjDDCpKpQJpMiWlDysKBSvBMohQkvyoLKOJChr8KIOQPkLLoigpqbS0+jCKirSizCJSskFK007r4Hlxk+cb7j7nnndfCxY4cNfZe79zz7D3fgEBmsAYCwcngDPA6eLnUQH+Bjg1GVwDHgZvgc1gF+sfHeBjsAzcAkbbzeFAcL5w+BWTg5fgQTDelx0fAa4DnzC1eCRm1EBfcXwYWAC2M2vRKAIRqNP5VeB7phfXwUirHR8Nnme+g+/gJktmAwaZDX5gvokz4GCVzq8Q25Qvo5bPUBXOZ4O/mT3wnB+0ZDq/Fuxh9gLfLkfKcD4J7Gb2RBVpTcDDUeBnZm+UmHV+iAWnOquQYiYAxcx/8AmM8Mb5GPAX8y9UeBOAOwoM4FtoNZgPLhHrSwTPAYhcQCKYA14QJzsViPPE+UTJg/KZdASc6MUHEAxmgE8l23Lbk8HvShywHpxG2IWCwCzwi0SbFrsacJbEgc6BIZIOYuPAOkl23XA1UImkQU7KvplBb7i4+lLBT7Tj+0tsyJhqV1Vla/ipDqyRYGOhM/FkCcItYKji6/hYCdfxJmfCxyUEIM2ihEyKBFuj+oq+JgretDgrVU20N8MoFqF0e1ETgDiivaeMYgslJCACA6yvPzRRbDaK5REDsFtTVnoHwWZenQqStf/P1RSABKLd4Q6hSoJIp9JMrOsAhBEDEOsQqqfk3jRXpj4SbF/qEGkkiFzUHIC3BNuTHCKU1fSY5gA0E2xPlBGAfZpL8V8JtifIeAWKNQYgkrgIznQIPbDbGUDYvVzWNniFILJTYwDOEuxuNQqVEoSKNDZmfCPYXWMUKyAIndAUgDxpFSP8kkoQKtd0AqSW7NKNgpMIQg0aAlBGdL7rn8qx2E/bTIp1/L1VWeP8BhlVY2fClwiCUyxyPs1Nk6WnyHEmnk8QXG9RR5qMeuUP5qyFBn+MJ4hWuiixDyY6PlTUGWShtL+BQsCfhJxAWB+9MeA9ccxONVkWW81622Rlocfl60osOhQadOaAb/r8/yGY665OLyrF28BnCqrDZe6ivouYGSoCT7t5V7vFrOBl8AP8ICWmOD+Ov2Pq0OG0JKa4NO5LyPd0wen0Q+fvg4M8XXxq/cz5dq+aqfn93o+c52vRIquTDL4C3pOUZbYbwx+cz6Wcvlpt7DzfZrOp5+46mzrPM0TLdOfadIG39U6VdfPaY7OVfr+sjjRHALabMKQCPGRxaz0/s8SouHtv9NIQ/soEi2djxcVHJRrAZJXJB087xnhdbqWT5weIvt8WiU7zI3o5uEB5N4rIDbxgrr+0uJXn5j3o+c1kvQ2OZrI5beLVyrT8i9Xi293FonOcT+lr4F5wnplPAM+Eimc3g0dZ7/cOqwy8LAo0/EqdDkZbmWz9b/EHXwo/j1QjQJgAAAAASUVORK5CYII="
+            alt="max"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
